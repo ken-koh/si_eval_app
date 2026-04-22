@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222222;
+}
+
+.start-screen {
+    background: #222222;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+}
+
+.start-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-screen button,
+.start-screen p {
+    font-size: 4rem;
+    padding: 1.5rem 1.75rem;
+    text-align: center;
+    font-family: sans-serif;
+    color: #DDDDDD;
+}
+
+#start-explanation {
+    font-size: 1.5rem;
+    width: 50vw;
+}
+
+.start-screen button {
+    margin: 1rem;
+    width: 20rem;
+    background-color: #666666;
+    cursor: pointer;
+}
+
+.experience-screen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container-outline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 95vw;
+    height: 95vh;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #333333;
+    z-index: -1;
+}
+
+.text-top-left {
+    position: absolute;
+    top: 0rem;
+    left: 1rem;
+    color: #c0c0c0;
+    font-size: 2rem;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+.top-prompt {
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f0f0f0;
+    font-size: 2.25rem;
+    font-family: sans-serif;
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+    z-index: 3;
+}
+
+.zoom-target-outline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #b86dc2;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.zoom-inner-square {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #44afd3;
+    transition: background-color 0.3s;
+    z-index: 1;
+}
+
+.zoom-inner-square.zoom-match {
+    background-color: #76803b;
+}

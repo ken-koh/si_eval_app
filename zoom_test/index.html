@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Zoom</title>
+    <link rel="stylesheet" href="zoom.css">
+    <script type="text/javascript" src="zoom.js"></script>
+    <style>
+        html, body {
+            touch-action: none;
+            -ms-touch-action: none;
+            overscroll-behavior: none;
+        }
+        #experience-screen,
+        #start-screen {
+            touch-action: none;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false;">
+    <div id="experience-screen" class="experience-screen" style="display: none;">
+        <div id="container-outline" class="container-outline"></div>
+        <div id="text-top-left" class="text-top-left">Zoom</div>
+        <div id="top-prompt" class="top-prompt" style="display: none;">Keep your fingers on the surface while zooming</div>
+        <div id="zoom-target-outline" class="zoom-target-outline"></div>
+        <div id="zoom-inner-square" class="zoom-inner-square"></div>
+    </div>
+
+    <div class="start-screen" id="start-screen">
+        <div class="start-controls">
+            <p id="start-title">Zoom</p>
+            <p id="start-explanation">Pinch to zoom until the blue square matches the purple outline.</p>
+            <button id="start-button" onclick="startExperience()">Start</button>
+        </div>
+    </div>
+</body>
+
+</html>
